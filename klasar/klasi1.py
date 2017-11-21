@@ -16,4 +16,6 @@ class nagdyr:
         return self.tegundin
     def afl(self):
         return self.aflid
+    def prenta(self):
+        print("ég er ",self.tegundin,"sem er staðsettur",self.stadsetningin,"og er með",self.aflid,"sem afl")
 
