@@ -12,3 +12,5 @@ for x in range(3):
     nagdyrin.append(nagdyr("rotta", randint(2, 100), afl[randint(0, 2)]))
 print(nagdyrin)
 
+keyrsla = True
+while keyrsla != False:
