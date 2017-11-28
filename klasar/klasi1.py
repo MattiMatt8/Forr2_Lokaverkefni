@@ -16,7 +16,7 @@ class nagdyr:
         return self.tegundin
     def afl(self):
         return self.aflid
-    def tengingur(self):
+    def teningur(self):
         return randint(1,6)
     def prenta(self):
         print("Ég er",self.tegundin,"sem er staðsettur",self.stadsetningin,"og er með",self.aflid,"sem afl.")
