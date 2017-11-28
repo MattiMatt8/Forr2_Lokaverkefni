@@ -24,3 +24,4 @@ class nagdyr:
         return nagdyr(self.tegundin,ny,self.aflid)
 
 
+
