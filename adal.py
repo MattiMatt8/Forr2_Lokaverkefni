@@ -267,8 +267,5 @@ while keyrsla != False:
     print()
     print("-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-")
     if nagdyrin[mus].stadsetning() == 100:
-        for x in range(5):
-            nagdyrin[x].prenta()
-        print()
-        print("  Músinn VANN")
+        print("  Músin VANN")
         break
