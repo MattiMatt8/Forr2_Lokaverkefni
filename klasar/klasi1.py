@@ -19,7 +19,7 @@ class nagdyr:
     def teningur(self):
         return randint(1,6)
     def prenta(self):
-        print("Ég er",self.tegundin,"sem er staðsettur",self.stadsetningin,"og er með",self.aflid,"sem afl.")
+        print("Ég er",self.tegundin,"og er staðsett/ur á reiti",self.stadsetningin,"og er með",self.aflid,"sem afl.")
     def nyStadsetning(self,ny):
         return nagdyr(self.tegundin,ny,self.aflid)
 
