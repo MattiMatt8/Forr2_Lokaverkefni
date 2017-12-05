@@ -9,35 +9,34 @@ class teningur:
             print("▉\t○\t▉")
             print("▉\t\t▉")
             print("▉▉▉▉▉▉▉")
-        if kast == 2:
+        elif kast == 2:
             print("▉▉▉▉▉▉▉")
             print("▉○\t\t▉")
             print("▉\t\t▉")
             print("▉\t   ○▉")
             print("▉▉▉▉▉▉▉")
-        if kast == 3:
+        elif kast == 3:
             print("▉▉▉▉▉▉▉")
             print("▉○\t\t ▉")
             print("▉   ○\t ▉")
             print("▉   \t○▉")
             print("▉▉▉▉▉▉▉")
-        if kast ==4:
+        elif kast ==4:
             print("▉▉▉▉▉▉▉")
             print("▉○\t   ○▉")
             print("▉\t\t ▉")
             print("▉○\t   ○▉")
             print("▉▉▉▉▉▉▉")
-        if kast ==5:
+        elif kast ==5:
             print("▉▉▉▉▉▉▉")
             print("▉○\t   ○▉")
             print("▉\t○\t▉")
             print("▉○\t   ○▉")
             print("▉▉▉▉▉▉▉")
-        if kast == 6:
+        elif kast == 6:
             print("▉▉▉▉▉▉▉")
             print("▉○\t   ○▉")
             print("▉○\t   ○▉")
             print("▉○\t   ○▉")
             print("▉▉▉▉▉▉▉")
-        print("teningur")
 
