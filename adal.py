@@ -31,12 +31,12 @@ class faerast:
     def mus(self,kast):
         haetta = False
         if self.tilBaka == False:
-            fra = nagdyrin[mus].stadsetning()
+            fra = nagdyrin[mus].stadsetning()+1
             til = nagdyrin[mus].stadsetning()+kast+1
             um = 1
         else:
             print("TIL BAKA")
-            fra = nagdyrin[mus].stadsetning()
+            fra = nagdyrin[mus].stadsetning() - 1
             til = nagdyrin[mus].stadsetning() - self.tilBakaUm - 1
             um = - 1
         stada = nagdyrin[mus].stadsetning()
@@ -44,29 +44,34 @@ class faerast:
             print(x)
             if self.tilBaka == False:
                 stada += 1
+                print(stada, "Staða")
             else:
                 stada -= 1
+                print(stada, "Staða")
             for y in range(2, 5):
                 rotta = nagdyrin[y].stadsetning()
-                if x == rotta:
-                    print("Rotta", rotta, "er á reyti", x)
+                if stada == rotta:
+                    print("Rotta", rotta, "er á reyti", stada)
                     print(nagdyrin[mus].afl(),"mús og rotta",nagdyrin[y].afl())
                     if nagdyrin[mus].afl() < nagdyrin[y].afl():
                         haetta = True
                         self.tilBaka = True
                         self.tilBakaUm = nagdyrin[y].afl()
-                        if nagdyrin[mus].stadsetning()-self.tilBakaUm < 0:
-                            self.tilBakaUm = nagdyrin[mus].stadsetning()-self.tilBakaUm+abs(self.tilBakaUm)+1
-                        elif nagdyrin[mus].stadsetning()-self.tilBakaUm == 0:
+                        print("Rotta afl TIL BAKA",nagdyrin[y].afl())
+                        if stada-self.tilBakaUm < 0:
+                            self.tilBakaUm = stada-self.tilBakaUm+abs(self.tilBakaUm)+1
+                            print("Shabba if setning:",stada-self.tilBakaUm)
+                        elif stada-self.tilBakaUm == 0:
                             self.tilBakaUm = self.tilBakaUm - 1
                     elif nagdyrin[mus].afl() == nagdyrin[y].afl():
                         stada = stada + 1
                         haetta = True
                 hamstur = 1
                 hamsturinn = nagdyrin[hamstur].stadsetning()
-                if x == hamsturinn:
+                if stada == hamsturinn:
                     print("Hamstur kastar um",nagdyrin[hamstur].afl(),"reiti")
                     stada = stada + nagdyrin[hamstur].afl()
+                    print("Hamstur stada",stada)
             if haetta == True:
                 if self.tilBaka == True:
                     print()
@@ -77,7 +82,14 @@ class faerast:
 nagdyrin[3].prenta()
 nagdyrin[3] = nagdyrin[3].nyStadsetning(3)
 nagdyrin[3].prenta()
+nagdyrin[3] = nagdyr("rotta", 3, 1)
+nagdyrin[2] = nagdyr("rotta", 10, 4)
+nagdyrin[0] = nagdyr("mús", 1, 1)
+nagdyrin[1] = nagdyr("hamstur", 2, 13)
 mus = 0
+for x in range(5):
+    nagdyrin[x].prenta()
+print()
 keyrsla = True
 while keyrsla != False:
     kast = nagdyrin[mus].teningur()
