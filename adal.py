@@ -15,9 +15,6 @@ print()
 for x in range(5):
     nagdyrin[x].prenta()
 print()
-#nagdyrin[0].prenta()
-#nagdyrin[0] = nagdyrin[0].nyStadsetning(100)
-#nagdyrin[0].prenta()
 class faerast:
     tilBaka = False
     tilBakaUm = 0
@@ -191,7 +188,9 @@ def linur():
     print("-\t-\t-\t-\t-\t-")
 mus = 0
 keyrsla = True
+umferdir = 0
 while keyrsla != False:
+    umferdir += 1
     fer = faerast()
     kast = randint(1,6)
     linur()
@@ -245,11 +244,11 @@ while keyrsla != False:
         fer.rotta(rotta3,fer.tilBakaUm,0)
         fer.tilBaka = False
     print("Ný staðsetning rottunnar:",nagdyrin[rotta3].stadsetning())
+    kast = randint(1,6)
     linur()
     print("  Hamstur kastaði")
     teningur(kast)
     linur()
-    kast = randint(1,6)
     fer.hamstur(kast)
     print("Ný staðsetning hamstursins :",nagdyrin[1].stadsetning())
     stadsetningar = {nagdyrin[mus].stadsetning():"Mús",nagdyrin[1].stadsetning():"Hamstur",nagdyrin[rotta1].stadsetning():"Rotta 1",nagdyrin[rotta2].stadsetning():"Rotta 2",nagdyrin[rotta3].stadsetning():"Rotta 3"}
@@ -268,4 +267,5 @@ while keyrsla != False:
     print("-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-")
     if nagdyrin[mus].stadsetning() == 100:
         print("  Músin VANN")
+        print("Það voru",umferdir,"umferðir")
         break
